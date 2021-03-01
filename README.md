@@ -1,6 +1,6 @@
 # ElasticLogger a Lumen custom logger package for Cloudstaff
 
-A plugin for creating custom logs for Lumen microframework
+A package for creating custom logs in Lumen microframework
 
 ## Installation
 
