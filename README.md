@@ -4,7 +4,7 @@ A package for creating custom logs in Lumen microframework
 
 ## Installation
 
-You can install this plugin into your Lumen application using [composer](https://getcomposer.org).
+You can install this package into your Lumen application using [composer](https://getcomposer.org).
 
 The recommended way to install composer packages is:
 
