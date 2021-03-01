@@ -1,6 +1,6 @@
-# ElasticLogger is a custom logger plugin for Cloudstaff
+# ElasticLogger a Lumen custom logger package for Cloudstaff
 
-A plugin for creating custom logs for Lumen
+A plugin for creating custom logs for Lumen microframework
 
 ## Installation
 
@@ -44,7 +44,7 @@ public function initialize(): void
 
 ## Usage
 
-The component will expect the following parameters:
+The library will expect the following parameters:
 
 * EventType Can be use to describe the type of event being written to logs
 * Message content message of your logs
@@ -56,31 +56,36 @@ to your logs
 Create an activity information log:
 
 ```php
-$this->Logcentral->activityInfo('EventType', 'your message');
+$log = new BaseLogger();
+```
+
+
+```php
+$log->activityInfo('EventType', 'your message');
 ```
 
 Create an activity debug log:
 
 ```php
-$this->Logcentral->activityDebug('EventType', 'your message');
+$log->activityDebug('EventType', 'your message');
 ```
 
 Create an activity Error log:
 
 ```php
-$this->Logcentral->activityError('EventType', 'your message');
+$log->activityError('EventType', 'your message');
 ```
 
 Create an activity Notice log:
 
 ```php
-$this->Logcentral->activityNotice('EventType', 'your message');
+$log->activityNotice('EventType', 'your message');
 ```
 
 Create an activity Warning log:
 
 ```php
-$this->Logcentral->activityWarning('EventType', 'your message');
+$log->activityWarning('EventType', 'your message');
 ```
 
 Pass an array to your logs. Example below:
@@ -92,5 +97,5 @@ $data = [
     'roles' => ['Admin', 'Support']
 ];
 
-$this->Logcentral->activityInfo('Login', 'User successfully logged in', $data);
+$log->activityInfo('Login', 'User successfully logged in', $data);
 ```
