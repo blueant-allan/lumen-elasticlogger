@@ -9,36 +9,21 @@ You can install this plugin into your Lumen application using [composer](https:/
 The recommended way to install composer packages is:
 
 ```sh
-composer require blueant-allan/ElasticLogger
+composer require blueant-allan/lumen-elasticlogger
 ```
 
 ## Configuration
 
-1. After installing the package in your project. You need to load the plugin, 
-in your src/Application.php inside your bootstrap method add the following code 
-to load the plugin.
+1. After installing the package in your project. You can now instantiate the class 
+by including the library as such.
 
 ```php
-public function bootstrap()
-{
-    // you loaded plugins here
+use blueantallan\Lumen\ElasticLogger\Logger\BaseLogger;
 
-    $this->addPlugin('ElasticLogger');
-}
-```
-
-2. To start using the plugin, load the component in your controller initialize()
-method as such:
-
-```php
-public function initialize(): void
-{
-    parent::initialize();
-
-    // more of your controller initialize code here
-
-
-    $this->loadComponent('ElasticLogger.Logcentral');
+public function yourMethod()
+{    
+    $log = new BaseLogger();
+    $log->activityInfo('Event Type', 'Write my test log now.');
 }
 ```
 
