@@ -74,8 +74,6 @@ class BaseLogger
      */
     public function __call(string $name, array $arguments): bool
     {
-//        storage_path(self::DEFAULT_LOG_DIR);
-//        exit;
         if (empty($arguments) || count($arguments) === 1) {
             return 'Missing parameters';
         }
