@@ -25,7 +25,7 @@ class BaseLogger
      * Default log directory name
      */
     CONST DEFAULT_LOG_DIR = 'logs';
-    CONST DEFAULT_ABSOLUTE_LOG_DIR = __DIR__.'/../../storage/logs/';
+    CONST DEFAULT_ABSOLUTE_LOG_DIR = '/html/storage/logs/';
 
     /**
      * Log path
@@ -44,9 +44,8 @@ class BaseLogger
      */
     public function __construct()
     {
-        $this->path = (function_exists('storagePath'))
-            ? storage_path(self::DEFAULT_LOG_DIR).'/'
-            : self::DEFAULT_ABSOLUTE_LOG_DIR;
+        $parts = explode('/html/', __DIR__);
+        $this->path = $parts[0].self::DEFAULT_ABSOLUTE_LOG_DIR;
     }
 
 
@@ -75,6 +74,8 @@ class BaseLogger
      */
     public function __call(string $name, array $arguments): bool
     {
+//        storage_path(self::DEFAULT_LOG_DIR);
+//        exit;
         if (empty($arguments) || count($arguments) === 1) {
             return 'Missing parameters';
         }
