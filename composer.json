@@ -1,0 +1,21 @@
+{
+    "name": "blueant-allan/lumen-elasticlogger",
+    "description": "A custom log plugin for Cloudstaff for Lumen microframework",
+    "type": "package",
+    "authors" : [
+        {
+            "name": "Allan  Atim",
+            "email": "blueant.allan@gmail.com",
+            "homepage": "https://github.com/blueant-allan"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "laravel/lumen-framework": ">5.0"        
+    },    
+    "autoload": {
+        "psr-4": {
+            "blueantallan\\Lumen\\ElasticLogger\\": "src/"
+        }
+    }    
+}

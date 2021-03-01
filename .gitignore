@@ -1,0 +1,6 @@
+# Application specific files #
+##############################
+/storage/*
+/vendor/*
+composer.phar
+composer.lock
