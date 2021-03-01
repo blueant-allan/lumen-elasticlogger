@@ -1,6 +1,6 @@
 {
     "name": "blueant-allan/lumen-elasticlogger",
-    "description": "A custom log plugin for Cloudstaff for Lumen microframework",
+    "description": "A custom log package for Cloudstaff using Lumen microframework",
     "type": "package",
     "authors" : [
         {
